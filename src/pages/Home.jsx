@@ -1,35 +1,40 @@
 import ComingSoon from "../components/ComingSoon";
+
 function Home() {
   return (
-    <div className="font-sans text-[#0A1B3B] bg-white">
-      {/* NAVBAR */}
-      <nav className="w-full border-b border-gray-200 bg-white fixed z-50 top-0">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="flex items-center gap-2 text-2xl font-extrabold tracking-tight">
-            <a className="flex items-center" href="/">
-              <img
+    <div className="font-sans text-[#0A1B3B] bg-white overflow-x-hidden">
+      {/* ================= NAVBAR ================= */}
+      <nav className="fixed top-0 z-50 w-full max-w-full bg-white/90 backdrop-blur-md border-b border-gray-200 overflow-x-hidden">
+        <div className="flex items-center justify-between px-6 py-4">
+          {/* LOGO IZQUIERDA */}
+          <a href="/" className="flex items-center gap-2">
+            <img
               src="/logos/hostcar-logo-navbar-2.png"
               alt="HostCar24H logo"
-              className="w-8 h-8"
+              className="w-9 h-9"
             />
-            <span className="text-[#C69A39]"> HostCar24H</span>
-            </a>
-          </h1>
+            <span className="text-xl font-extrabold tracking-tight text-[#C69A39]">
+              HostCar24H
+            </span>
+          </a>
+
+          {/* CTA DERECHA */}
           <a
             href="/contact"
-            className="text-sm px-4 py-2 bg-[#C69A39] text-white rounded-md hover:opacity-90 transition"
+            className="text-sm px-5 py-2 bg-[#C69A39] text-white rounded-md font-medium hover:opacity-90 transition"
           >
-            Contact
+            Contacto
           </a>
         </div>
       </nav>
 
-      <section className="pt-32 px-6 pb-20 text-center max-w-3xl mx-auto">
+      {/* ================= HERO VIDEO (FULL WIDTH) ================= */}
+      <div className="pt-20 w-full max-w-full overflow-x-hidden">
         <ComingSoon />
-      </section>
+      </div>
 
-      {/* HERO */}
-      <section className="pt-32 px-6 pb-20 text-center max-w-3xl mx-auto">
+      {/* ================= CONTENIDO ================= */}
+      <section className="px-6 py-24 text-center max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold leading-tight mb-4">
           Tu experiencia segura y de calidad en movilidad
         </h2>
@@ -40,13 +45,13 @@ function Home() {
 
         <a
           href="https://hostcar-clients.vercel.app/"
-          className="mt-4 inline-block px-8 py-3 text-white bg-[#0A1B3B] rounded-md text-lg hover:bg-[#081325] transition"
+          className="inline-block px-8 py-3 text-white bg-[#0A1B3B] rounded-md text-lg hover:bg-[#081325] transition"
         >
           Ir al Portal
         </a>
       </section>
 
-      {/* SERVICIOS */}
+      {/* ================= SERVICIOS ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
         <div className="bg-[#F6F6F6] p-8 rounded-xl shadow-sm">
           <h3 className="text-xl font-semibold mb-2">Reservas rápidas</h3>
@@ -73,17 +78,16 @@ function Home() {
         </div>
       </section>
 
-      {/* POR QUÉ ELEGIRNOS */}
+      {/* ================= POR QUÉ ELEGIRNOS ================= */}
       <section className="bg-[#0A1B3B] text-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">¿Por qué elegir HostCar24H?</h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-200">
           Tecnología, seguridad y atención personalizada para ofrecer una
-          experiencia de movilidad superior. Nuestro equipo valida documentos en
-          Google Cloud Storage y garantiza confiabilidad.
+          experiencia de movilidad superior.
         </p>
       </section>
 
-      {/* CTA FINAL */}
+      {/* ================= CTA FINAL ================= */}
       <section className="py-16 px-6 text-center">
         <h3 className="text-2xl font-bold mb-3">¿Listo para comenzar?</h3>
         <p className="text-gray-600 mb-6">
@@ -97,7 +101,7 @@ function Home() {
         </a>
       </section>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
       <footer className="bg-black text-white py-6 text-center text-sm">
         © {new Date().getFullYear()} HostCar24H — Todos los derechos reservados
       </footer>
